@@ -1,0 +1,123 @@
+<!-- Wappler include head-page="index.html" is="dmx-app" id="calendar" appConnect="local" framework7_6="With App Connect" framework7_icons="local" capacitor="local" components="{dmxStripe:{}}" -->
+
+
+
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="#" class="link back"><i class="icon icon-back"></i>Back
+        </a>
+      </div>
+      <div class="title">Attendance Form</div>
+    </div>
+  </div>
+  <div class="toolbar tabbar tabbar-labels toolbar-bottom no-hairline">
+    <div class="toolbar-inner">
+      <a href="#" class="tab-link tab-link-active">
+        <i class="icon f7-icons">envelope_fill</i>
+        <span class="tabbar-label">Inbox</span>
+      </a>
+      <a href="#" class="tab-link">
+        <i class="icon f7-icons">today_fill<span class="badge color-red">5</span></i>
+        <span class="tabbar-label">Calendar</span>
+      </a>
+      <a href="#" class="tab-link">
+        <i class="icon f7-icons">cloud_fill</i>
+        <span class="tabbar-label">Upload</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="page-content wappler-block">
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+          <div class="title">Form To Data</div>
+        </div>
+      </div>
+      <div class="page-content">
+        <form class="list" id="my-form">
+          <ul>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Student's Name</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="name" placeholder="First and Last Name" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Student's District Number</div>
+                  <div class="item-input-wrap">
+                    <input name="district number" placeholder="District Number" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Gender</div>
+                  <div class="item-input-wrap">
+                    <select name="gender">
+                      <option value="male" selected="selected">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Toggle</div>
+                  <div class="item-after">
+                    <label class="toggle toggle-init">
+                      <input type="checkbox" name="toggle" value="yes" /><i class="toggle-icon"></i>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <div class="block block-strong row">
+          <div class="col"><a class="button button-fill convert-form-to-data" href="#">Get Data</a></div>
+          <div class="col"><a class="button button-fill fill-form-from-data" href="#">Fill Form</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      export default (props, { $, $on, $f7 }) => {
+        $on('pageInit', () => {
+          $('.convert-form-to-data').on('click', function () {
+            var formData = $f7.form.convertToData('#my-form');
+            alert(JSON.stringify(formData));
+          });
+    
+          $('.fill-form-from-data').on('click', function () {
+            var formData = {
+              'name': 'John',
+              'email': 'john@doe.com',
+              'gender': 'female',
+              'toggle': ['yes'],
+            }
+            $f7.form.fillFromData('#my-form', formData);
+          });
+        });
+    
+        return $render;
+      }
+    </script>
+
+
+  </div>
+</div>

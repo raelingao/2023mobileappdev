@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="dmxAppConnect/dmxAppConnect.js"></script>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<link rel="stylesheet" href="Framework7/6/css/framework7-bundle.min.css" />
+	<script src="Framework7/6/js/framework7-bundle.min.js"></script>
+	<script src="js/routes.js"></script>
+	<script src="dmxAppConnect/dmxFramework7_6/dmxFramework7_6.js" defer></script>
+	<link rel="stylesheet" href="dmxFramework7_icons/css/framework7-icons.css" />
+	<script src="capacitor.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/@fullcalendar/core@4.4.2/main.min.css" />
+	<script src="https://unpkg.com/@fullcalendar/core@4.4.2/main.min.js" defer></script>
+	<script src="https://unpkg.com/@fullcalendar/core@4.4.2/locales-all.min.js" defer></script>
+	<script src="https://unpkg.com/@fullcalendar/interaction@4.4.2/main.min.js" defer></script>
+	<script src="https://unpkg.com/@fullcalendar/daygrid@4.4.2/main.min.js" defer></script>
+	<script src="dmxAppConnect/dmxCalendar/dmxCalendar.js" defer></script>
+	<script src="https://unpkg.com/@fullcalendar/google-calendar@4.4.2/main.min.js" defer></script>
+	<script src="https://js.stripe.com/v3/" defer></script>
+	<script src="dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
+</head>
+
+<body is="dmx-app" id="index">
+	<div id="app" is="dmx-f7-app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div id="main" class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div class="toolbar tabbar tabbar-labels toolbar-bottom no-hairline">
+				<div class="toolbar-inner">
+					<a href="#" class="tab-link tab-link-active">
+						<i class="icon f7-icons">envelope_fill</i>
+						<span class="tabbar-label">Inbox</span>
+					</a>
+					<a href="#" class="tab-link">
+						<i class="icon f7-icons">today_fill<span class="badge color-red">5</span></i>
+						<span class="tabbar-label">Calendar</span>
+					</a>
+					<a href="#" class="tab-link">
+						<i class="icon f7-icons">cloud_fill</i>
+						<span class="tabbar-label">Upload</span>
+					</a>
+				</div>
+			</div>
+			<div id="index" class="page" data-name="index">
+
+				<!-- Top Navbar -->
+				<div class="navbar">
+					<div class="navbar-bg"></div>
+					<div class="navbar-inner">
+						<div class="title sliding">Awesome App</div>
+					</div>
+				</div>
+
+				<!-- Toolbar -->
+
+				<!-- Scrollable page content -->
+				<div class="login-screen" id="login1">
+					<div id="login1_page" data-name="login1_page" class="page login-screen-page">
+						<div class="page-content login-screen-content">
+							<div class="login-screen-title">My App</div>
+							<form>
+								<div class="list">
+									<ul>
+										<li class="item-content item-input">
+											<div class="item-inner">
+												<div class="item-title item-label">Username</div>
+												<div class="item-input">
+													<input type="text" name="username" placeholder="District Number/Email">
+												</div>
+											</div>
+										</li>
+										<li class="item-content item-input">
+											<div class="item-inner">
+												<div class="item-title item-label">Password</div>
+												<div class="item-input">
+													<input type="password" name="password" placeholder="Password">
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="list">
+									<ul>
+										<li><a href="#" class="item-link list-button">Sign In</a></li>
+									</ul>
+									<div class="block-footer">
+										<p>Students: District Number</p>
+										<p><a href="#" class="login-screen-close">Close Login Screen</a></p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="page-content wappler-block">
+					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridMonth"></dmx-calendar>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

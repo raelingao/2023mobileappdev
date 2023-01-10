@@ -1,0 +1,36 @@
+{
+  "projectName": "2023MobileAppDev",
+  "designFramework": "framework7",
+  "useRouting": true,
+  "routingHandler": "framework7",
+  "routingFile": "/js/routes.js",
+  "styleFile": "/css/style.css",
+  "assetsFolder": "/assets",
+  "frameworks": [
+    {
+      "name": "framework7_6",
+      "type": "With App Connect"
+    },
+    {
+      "name": "appConnect",
+      "type": "local"
+    },
+    {
+      "name": "framework7_icons",
+      "type": "local"
+    },
+    {
+      "name": "capacitor",
+      "type": "local"
+    }
+  ],
+  "runtime": "capacitor",
+  "projectType": "app",
+  "capacitor": {
+    "capacitor": {
+      "checked": true
+    },
+    "platform": "web"
+  },
+  "activeGitRemote": "origin"
+}
