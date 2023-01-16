@@ -1,4 +1,4 @@
-<!-- Wappler include head-page="index.html" is="dmx-app" id="calendar" appConnect="local" framework7_6="With App Connect" framework7_icons="local" capacitor="local" components="{dmxStripe:{}}" -->
+<!-- Wappler include head-page="index.html" is="dmx-app" id="calendar" appConnect="local" framework7_6="With App Connect" framework7_icons="local" capacitor="local" components="{dmxStripe:{},dmxCalendar:{}}" -->
 
 
 
@@ -10,7 +10,7 @@
         <a href="#" class="link back"><i class="icon icon-back"></i>Back
         </a>
       </div>
-      <div class="title">Attendance Form</div>
+      <div class="title">Monthly Calendar</div>
     </div>
   </div>
   <div class="toolbar tabbar tabbar-labels toolbar-bottom no-hairline">
@@ -31,70 +31,13 @@
   </div>
 
 
+
   <div class="page-content wappler-block">
-    <div class="page">
-      <div class="navbar">
-        <div class="navbar-bg"></div>
-        <div class="navbar-inner">
-          <div class="title">Form To Data</div>
-        </div>
-      </div>
-      <div class="page-content">
-        <form class="list" id="my-form">
-          <ul>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Student's Name</div>
-                  <div class="item-input-wrap">
-                    <input type="text" name="name" placeholder="First and Last Name" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Student's District Number</div>
-                  <div class="item-input-wrap">
-                    <input name="district number" placeholder="District Number" />
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Gender</div>
-                  <div class="item-input-wrap">
-                    <select name="gender">
-                      <option value="male" selected="selected">Male</option>
-                      <option value="female">Female</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-title">Toggle</div>
-                  <div class="item-after">
-                    <label class="toggle toggle-init">
-                      <input type="checkbox" name="toggle" value="yes" /><i class="toggle-icon"></i>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </form>
-        <div class="block block-strong row">
-          <div class="col"><a class="button button-fill convert-form-to-data" href="#">Get Data</a></div>
-          <div class="col"><a class="button button-fill fill-form-from-data" href="#">Fill Form</a></div>
-        </div>
-      </div>
-    </div>
+
+    <p>View our upcoming activities this month:</p>
+    <dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay"></dmx-calendar>
+
+
     <script>
       export default (props, { $, $on, $f7 }) => {
         $on('pageInit', () => {

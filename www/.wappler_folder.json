@@ -4,12 +4,28 @@
     "thumb": "/System/Calendar month.svg",
     "description": "calendar"
   },
-  "calendar.html": {
-    "layoutPage": "",
-    "description": ""
-  },
   "send-here.html": {
     "layoutPage": "",
     "description": "form submit send here"
+  },
+  "attendance.html": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "login.html": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "social.html": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "lunchmenu.html": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "menu.html": {
+    "layoutPage": "",
+    "description": ""
   }
 }

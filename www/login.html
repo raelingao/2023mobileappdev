@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <link rel="stylesheet" href="Framework7/6/css/framework7-bundle.min.css" />
+    <script src="Framework7/6/js/framework7-bundle.min.js"></script>
+    <script src="dmxAppConnect/dmxRouting/dmxRouting.js" defer></script>
+    <script src="js/routes.js"></script>
+    <script src="dmxAppConnect/dmxFramework7_6/dmxFramework7_6.js" defer></script>
+    <link rel="stylesheet" href="dmxFramework7_icons/css/framework7-icons.css" />
+    <script src="capacitor.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="dmxAppConnect/dmxValidator/dmxValidator.css" />
+    <script src="dmxAppConnect/dmxValidator/dmxValidator.js" defer></script>
+</head>
+
+<body is="dmx-app" id="login">
+    <div id="app" is="dmx-f7-app">
+        <div id="view1" class="view view-main">
+            <div class="page">
+                <div class="login-screen" id="login1">
+
+
+                    <div id="login1_page" data-name="login1_page" class="page login-screen-page">
+                        <div class="page-content login-screen-content">
+                            <div class="login-screen-title">Agenda Inked</div>
+                            <form>
+                                <div class="list">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label">Username</div>
+                                                <div class="item-input">
+                                                    <input type="text" name="username" placeholder="Username" required="" data-rule-number="" data-msg-number="Please enter a valid district number.">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label">Password</div>
+                                                <div class="item-input">
+                                                    <input type="password" name="password" placeholder="Password" required="" data-rule-number="" data-msg-number="Please enter a valid password.">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="/index" class="item-link list-button">Sign In</a></li>
+                                    </ul>
+                                    <div class="block-footer">
+                                        <p>Username: District Number</p>
+                                        <p>Password: Birthday (MM/DD/YYYY)</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="statusbar"></div>
+
+    </div>
+</body>
+
+</html>

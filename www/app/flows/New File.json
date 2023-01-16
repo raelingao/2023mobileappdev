@@ -1,3 +1,13 @@
 {
-  exec: {}
+  meta: {
+    options: {linkedFile: "login.html"},
+    $param: [
+      {type: "number", name: "new"}
+    ]
+  },
+  exec: {
+    steps: {
+      f7.dialog.login: {text: 4686680, title: "You are now logged in", name: "login"}
+    }
+  }
 }

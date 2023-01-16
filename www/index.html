@@ -29,6 +29,8 @@
 	<script src="https://unpkg.com/@fullcalendar/google-calendar@4.4.2/main.min.js" defer></script>
 	<script src="https://js.stripe.com/v3/" defer></script>
 	<script src="dmxAppConnect/dmxStripe/dmxStripe.js" defer></script>
+	<link rel="stylesheet" href="dmxAppConnect/dmxValidator/dmxValidator.css" />
+	<script src="dmxAppConnect/dmxValidator/dmxValidator.js" defer></script>
 </head>
 
 <body is="dmx-app" id="index">
@@ -39,36 +41,47 @@
 		<!-- Your main view, should have "view-main" class -->
 		<div id="main" class="view view-main">
 			<!-- Initial Page, "data-name" contains page name -->
-			<div class="toolbar tabbar tabbar-labels toolbar-bottom no-hairline">
+			<div class="toolbar tabbar-labels toolbar-bottom tabbar">
 				<div class="toolbar-inner">
-					<a href="#" class="tab-link tab-link-active">
-						<i class="icon f7-icons">envelope_fill</i>
-						<span class="tabbar-label">Inbox</span>
+					<a href="/index" class="tab-link">
+						<i class="icon f7-icons">house</i>
+						<span class="tabbar-label">Dashboard</span>
 					</a>
-					<a href="#" class="tab-link">
+					<a href="/calendar" class="tab-link">
 						<i class="icon f7-icons">today_fill<span class="badge color-red">5</span></i>
 						<span class="tabbar-label">Calendar</span>
 					</a>
-					<a href="#" class="tab-link">
-						<i class="icon f7-icons">cloud_fill</i>
-						<span class="tabbar-label">Upload</span>
+					<a href="/social" class="tab-link">
+						<i class="icon f7-icons">envelope_fill</i>
+						<span class="tabbar-label">Social</span>
+					</a>
+					<a href="/lunchmenu" class="tab-link">
+						<i class="icon f7-icons">alarm</i>
+						<span class="tabbar-label">Lunch</span>
+					</a>
+					<a href="/menu" class="tab-link">
+						<i class="icon f7-icons">menu</i>
+						<span class="tabbar-label">Menu</span>
 					</a>
 				</div>
 			</div>
+
 			<div id="index" class="page" data-name="index">
 
 				<!-- Top Navbar -->
 				<div class="navbar">
 					<div class="navbar-bg"></div>
 					<div class="navbar-inner">
-						<div class="title sliding">Awesome App</div>
+						<div class="title sliding">Agenda Inked</div>
 					</div>
 				</div>
 
 				<!-- Toolbar -->
 
 				<!-- Scrollable page content -->
-				<div class="login-screen" id="login1">
+
+
+				<div class="login-screen" id="login1" dmx-on:keydown="">
 					<div id="login1_page" data-name="login1_page" class="page login-screen-page">
 						<div class="page-content login-screen-content">
 							<div class="login-screen-title">My App</div>
@@ -79,7 +92,7 @@
 											<div class="item-inner">
 												<div class="item-title item-label">Username</div>
 												<div class="item-input">
-													<input type="text" name="username" placeholder="District Number/Email">
+													<input type="text" name="username" placeholder="Username" required="" data-rule-number="">
 												</div>
 											</div>
 										</li>
@@ -87,7 +100,7 @@
 											<div class="item-inner">
 												<div class="item-title item-label">Password</div>
 												<div class="item-input">
-													<input type="password" name="password" placeholder="Password">
+													<input type="password" name="password" placeholder="Password" required="">
 												</div>
 											</div>
 										</li>
@@ -95,11 +108,12 @@
 								</div>
 								<div class="list">
 									<ul>
-										<li><a href="#" class="item-link list-button">Sign In</a></li>
+										<!-- <li><a href="/index" class="item-link list-button">Sign In</a></li> -->
 									</ul>
 									<div class="block-footer">
-										<p>Students: District Number</p>
-										<p><a href="#" class="login-screen-close">Close Login Screen</a></p>
+										<p>Username: District Number</p>
+										<p>Password: Birthday (MM/DD/YYYY)</p>
+										<p><a href="#" class="login-screen-close">Sign In</a></p>
 									</div>
 								</div>
 							</form>
@@ -107,7 +121,18 @@
 					</div>
 				</div>
 				<div class="page-content wappler-block">
-					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridMonth"></dmx-calendar>
+					<button id="btn1">Button<a href="/attendance">Your link title</a></button>
+
+					<div class="list">
+						<ul>Important Announcements: </ul>
+						<ul>No School on next Monday! (1/23/23)</ul>
+						<ul>Great American Teach-In is Feburary the 2nd!</ul>
+					</div>
+
+
+					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridWeek" editable="true" selectable="true"></dmx-calendar>
+					<a class="twitter-timeline" href="https://twitter.com/MiddletonSTEM?ref_src=twsrc%5Etfw">Tweets by MiddletonSTEM</a>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 			</div>
 		</div>
