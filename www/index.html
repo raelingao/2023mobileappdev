@@ -121,17 +121,19 @@
 					</div>
 				</div>
 				<div class="page-content wappler-block">
-					<button id="btn1">Button<a href="/attendance">Your link title</a></button>
+					<button id="btn1"><a href="/attendance">Attendance Form</a></button>
 
 					<div class="list">
 						<ul>Important Announcements: </ul>
-						<ul>No School on next Monday! (1/23/23)</ul>
+						<ul>No School next Monday! (1/23/23)</ul>
 						<ul>Great American Teach-In is Feburary the 2nd!</ul>
 					</div>
 
 
-					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridWeek" editable="true" selectable="true"></dmx-calendar>
-					<a class="twitter-timeline" href="https://twitter.com/MiddletonSTEM?ref_src=twsrc%5Etfw">Tweets by MiddletonSTEM</a>
+					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridWeek" editable="true" selectable="true">
+						<dmx-calendar-source-google id="source1" google-calendar-id="40c2065bf79c2c1a20202941881c7401a9b109eb1fe59da4b319595900fb464e@group.calendar.google.com"></dmx-calendar-source-google>
+					</dmx-calendar>
+
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 			</div>
