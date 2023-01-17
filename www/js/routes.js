@@ -38,5 +38,9 @@ var routes = [
     "path": "/menu",
     "url": "./menu.html",
     "name": "menu"
+  },
+  {
+    "path": "/bugreport",
+    "url": "./bugreport.html"
   }
 ]

@@ -1,0 +1,79 @@
+<!-- Wappler include head-page="index.html" is="dmx-app" id="bugreport" appConnect="local" framework7_6="With App Connect" framework7_icons="local" capacitor="local" -->
+
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <div class="left">
+        <a href="#" class="link back"><i class="icon icon-back"></i>Back
+        </a>
+      </div>
+      <div class="title">Report a Bug</div>
+    </div>
+  </div>
+  <div class="page-content wappler-block">
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+          <div class="title">Form To Data</div>
+        </div>
+      </div>
+      <div class="page-content">
+        <form class="list" id="my-form">
+          <ul>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Date and time of occurence</div>
+                  <div class="item-input-wrap">
+                    <input type="datetime-local" name="name" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Description of the bug</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="Be as specific as possible." />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Device Used</div>
+                  <div class="item-input-wrap">
+                    <select name="Device Used">
+                      <option value="Android">Android</option>
+                      <option value="iPhone">iPhone</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Toggle</div>
+                      <div class="item-after">
+                        <label class="toggle toggle-init">
+                          <input type="checkbox" name="toggle" value="yes" /><i class="toggle-icon"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li> -->
+          </ul>
+        </form>
+        <div class="block block-strong row">
+          <!-- <div class="col"><a class="button button-fill convert-form-to-data" href="#">Get Data</a></div> -->
+          <div class="col"><a class="button button-fill fill-form-from-data" href="#" onclick="return confirm('Your response has been submitted, thank you.')">Submit</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

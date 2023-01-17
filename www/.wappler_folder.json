@@ -27,5 +27,9 @@
   "menu.html": {
     "layoutPage": "",
     "description": ""
+  },
+  "bugreport.html": {
+    "layoutPage": "",
+    "description": ""
   }
 }
