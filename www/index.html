@@ -41,6 +41,8 @@
 		<!-- Your main view, should have "view-main" class -->
 		<div id="main" class="view view-main">
 			<!-- Initial Page, "data-name" contains page name -->
+
+
 			<div class="toolbar tabbar-labels toolbar-bottom tabbar">
 				<div class="toolbar-inner">
 					<a href="/index" class="tab-link">
@@ -65,7 +67,6 @@
 					</a>
 				</div>
 			</div>
-
 			<div id="index" class="page" data-name="index">
 
 				<!-- Top Navbar -->
@@ -130,8 +131,18 @@
 					</div>
 
 
+					<iframe src="https://calendar.google.com/calendar/embed?src=40c2065bf79c2c1a20202941881c7401a9b109eb1fe59da4b319595900fb464e%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="350" height="500" frameborder="0" scrolling="no"></iframe>
+
 					<dmx-calendar id="calendar1" views="dayGridMonth,dayGridWeek,dayGridDay" view="dayGridWeek" editable="true" selectable="true">
-						<dmx-calendar-source-google id="source1" google-calendar-id="40c2065bf79c2c1a20202941881c7401a9b109eb1fe59da4b319595900fb464e@group.calendar.google.com"></dmx-calendar-source-google>
+						<dmx-calendar-source id="source1">
+							<dmx-calendar-event id="event1" title="Afterschool Tutoring" start="2023-01-17T16:00" end="2023-01-17T18:00" constraint.group="Tutoring" group-id="Tutoring" editable="true"></dmx-calendar-event>
+							<dmx-calendar-event id="event2" title="Afterschool Tutoring" start="2023-01-24T16:00" end="2023-01-24T18:00" constraint.group="Tutoring" group-id="Tutoring"></dmx-calendar-event>
+							<dmx-calendar-event id="event3" title="Afterschool Tutoring" start="2023-01-19T16:00" end="2023-01-19T18:00" constraint.group="Tutoring" group-id="Tutoring"></dmx-calendar-event>
+							<dmx-calendar-event id="event4" title="Afterschool Tutoring" start="2023-01-26T16:00" end="2023-01-26T18:00" constraint.group="Tutoring" group-id="Tutoring"></dmx-calendar-event>
+							<dmx-calendar-event id="event5" title="Afterschool Tutoring" start="2023-01-31T16:00" end="2023-01-31T18:00" constraint.group="Tutoring" group-id="Tutoring"></dmx-calendar-event>
+							<dmx-calendar-event id="event6" title="Afterschool Tutoring" start="2023-02-02T16:00" end="2023-02-02T18:00" constraint.group="Tutoring" group-id="Tutoring"></dmx-calendar-event>
+						</dmx-calendar-source>
+						<!-- <dmx-calendar-source-google id="source1" google-calendar-id="40c2065bf79c2c1a20202941881c7401a9b109eb1fe59da4b319595900fb464e@group.calendar.google.com"></dmx-calendar-source-google> -->
 					</dmx-calendar>
 
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
