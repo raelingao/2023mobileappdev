@@ -31,7 +31,7 @@ var routes = [
   },
   {
     "path": "/social",
-    "name": "social",
+    "name": "",
     "url": "./social.html"
   },
   {

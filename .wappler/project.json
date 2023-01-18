@@ -35,5 +35,6 @@
     "device": null,
     "deviceId": null
   },
-  "activeGitRemote": "origin"
+  "activeGitRemote": "origin",
+  "appFile": "/js/app.js"
 }
